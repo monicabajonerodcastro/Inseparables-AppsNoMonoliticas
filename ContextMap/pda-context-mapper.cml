@@ -1,0 +1,151 @@
+/*
+ * DOMINIOS Y SUBDOMINIOS
+ */
+
+Domain Propiedades{
+    domainVisionStatement=""
+
+    Subdomain InspeccionPropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Recolectar información precisa sobre arrendatarios; transacciones, comparativos de ventas; estructuras físicas, etc., para llevar una trazabilidad controlada tanto de las propiedades como de los interesados, y mantener los activos que generen más confianza entre los clientes."
+    }
+
+    Subdomain InvestigacionDetallePropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Recopilar información de las propiedades como tamaño, tipo de construcción, número de pisos, etc., para que tanto los arrendatarios como arrendadores, tengan la información actualizada de las propiedades y así puedan tomar la mejor decisión tanto en inversión como en elegir la propiedad que mejor supla sus necesidades."
+    }
+
+    Subdomain ComparacionPropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Los usuarios pueden comparar las tarifas de venta promedio de una propiedad en cuestión, la duración promedio de los acuerdos, las tasas de desocupación o las propiedades similares dentro de la misma área."
+    }
+
+    Subdomain AnalisisVentaPropiedades{
+        type=SUPPORTING_DOMAIN
+        domainVisionStatement="Recopilación y análisis de los verdaderos compradores y vendedores para tener información profunda (incluye materiales de mercado y noticias en los medios) que exponga un panorama transparente de las transacciones."
+    }
+
+    Subdomain MonitoreoPropiedades{
+        type=SUPPORTING_DOMAIN
+        domainVisionStatement="Revisión constante del mercado en los sectores donde tiene cobertura, para la identificación de nuevas propiedades en venta y/o alquiler. Revisión de vencimientos y/o extensiones de contratos, términos de plazos, seguros, etc., para tener las propiedades con toda su reglamentación diaria y en regla."
+    }
+
+    Subdomain CargueVentasHistoricasPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Cargue y presentación de la información histórica de cada propiedad para garantizar que los usuarios puedan analizar sus propiedades interesadas."
+    }
+
+    Subdomain TomaFotografiasVideosPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Complementar la información obtenida de cada una de las propiedades con registros visuales que agregue valor a la descripción de la propiedad y que permita una visualización real y actualizada del estado de esta."
+    }
+
+}
+
+Domain Publicaciones{
+    domainVisionStatement=""
+
+    Subdomain PublicacionPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Publicación de las propiedades, sus características, valor, estado; y toda la información pertinente para el interesado en tomarla ya sea en alquiler, subalquiler, venta y/o trabajo conjunto."
+    }
+
+    Subdomain ActualizacionPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Mantenimiento de la información de las propiedades mediante la investigación de nuevas características y actualización de los anuncios."
+    }
+}
+
+Domain Mercado{
+    domainVisionStatement=""
+
+    Subdomain IdentificacionMercado{
+        type=CORE_DOMAIN
+        domainVisionStatement="Identificación del mercado al que pertenece cada propiedad, clasificación de las propiedades dependiendo de su tipo y/o uso"
+    }
+
+    Subdomain AnalisisMercado{
+        type=CORE_DOMAIN
+        domainVisionStatement="Se permite a los usuarios realizar un desglose de propiedad principal, la participación de mercado de las agencias, las tendencias históricas de arrendamiento y venta, y más en un área geográfica específica o dentro de un conjunto de propiedades competitivas."
+    }
+
+    Subdomain AccesoNuevosMercados{
+        type=SUPPORTING_DOMAIN
+        domainVisionStatement="Investigación de propiedades que no se encuentren registradas en el sistema para incluir nuevos interesados y acceder a las transacciones de la propiedad con el fin de administrarla de forma ágil y segura."
+    }
+
+}
+
+Domain Clientes{
+    domainVisionStatement=""
+
+    Subdomain VerificacionInformacionClientes{
+        type=CORE_DOMAIN
+        domainVisionStatement="Estudio de rigor donde se verifica la información de los potenciales arrendatarios de una propiedad, para minimizar cualquier riesgo en contra de la propiedad, los agentes y/o los propietarios."
+    }
+
+    Subdomain ComunicacionClientes{
+        type=CORE_DOMAIN
+        domainVisionStatement="Comunicación entre los interesados en las propiedades y propietarios para generar una relación contractual en la que los agentes puedan exponer sus servicios a los propietarios y así, que puedan expresar sus necesidades y recibir una asesoría para una negociación en doble vida donde ambas partes obtengan una ganancia. "
+    }
+}
+
+/*
+ * CONTEXTOS
+ */
+
+BoundedContext InspeccionPropiedadesContexto implements InspeccionPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext InvestigacionDetallePropiedadesContexto implements InvestigacionDetallePropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext ComparacionPropiedadesContexto implements ComparacionPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext AnalisisVentaPropiedadesContexto implements AnalisisVentaPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext MonitoreoPropiedadesContexto implements MonitoreoPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext CargueVentasHistoricasPropiedadesContexto implements CargueVentasHistoricasPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext TomaFotografiasVideosPropiedadesContexto implements TomaFotografiasVideosPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext PublicacionPropiedadesContexto implements PublicacionPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext ActualizacionPropiedadesContexto implements ActualizacionPropiedades{
+    domainVisionStatement=""
+}
+
+BoundedContext IdentificacionMercadoContexto implements IdentificacionMercado{
+    domainVisionStatement=""
+}
+
+BoundedContext AnalisisMercadoContexto implements AnalisisMercado{
+    domainVisionStatement=""
+}
+
+BoundedContext AccesoNuevosMercadosContexto implements AccesoNuevosMercados{
+    domainVisionStatement=""
+}
+
+BoundedContext VerificacionInformacionClientesContexto implements VerificacionInformacionClientes{
+    domainVisionStatement=""
+}
+
+BoundedContext ComunicacionClientesContexto implements ComunicacionClientes{
+    domainVisionStatement=""
+}
