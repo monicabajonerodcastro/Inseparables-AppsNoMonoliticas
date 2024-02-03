@@ -139,3 +139,4 @@ BoundedContext RelacionContractualContexto implements ComunicacionClientes, Veri
     GestionMercadosContexto [U, OHS] -> [D] InformacionPropiedadesContexto
 
  }
+

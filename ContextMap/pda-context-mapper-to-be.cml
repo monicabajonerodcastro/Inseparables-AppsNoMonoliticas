@@ -1,0 +1,191 @@
+/*
+ * DOMINIOS Y SUBDOMINIOS
+ */
+
+Domain ProvisionInformacionPropiedades{
+    domainVisionStatement="Manejo y gestión de todos los activos inmuebles de los clientes como lo son las propiedades
+    minoristas, oficinas, propiedades de tipo industrial y/o de uso especializado, ofrenciendo el servicio de información
+    detallada y análisis del mercado de cada una de las propiedades."
+
+    Subdomain InspeccionPropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Recolectar información precisa sobre arrendatarios; transacciones, comparativos de ventas;
+        estructuras físicas, etc., para llevar una trazabilidad controlada tanto de las propiedades como de los interesados,
+        y mantener los activos que generen más confianza entre los clientes."
+    }
+
+    Subdomain InvestigacionDetallePropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Recopilar información de las propiedades como tamaño, tipo de construcción, número de pisos,
+        etc., para que tanto los arrendatarios como arrendadores, tengan la información actualizada de las propiedades y así
+        puedan tomar la mejor decisión tanto en inversión como en elegir la propiedad que mejor supla sus necesidades."
+    }
+
+    Subdomain ComparacionPropiedades{
+        type=CORE_DOMAIN
+        domainVisionStatement="Los usuarios pueden comparar las tarifas de venta promedio de una propiedad en cuestión,
+        la duración promedio de los acuerdos, las tasas de desocupación o las propiedades similares dentro de la misma área."
+    }
+
+    Subdomain MonitoreoPropiedades{
+        type=SUPPORTING_DOMAIN
+        domainVisionStatement="Revisión constante del mercado en los sectores donde tiene cobertura, para la identificación
+        de nuevas propiedades en venta y/o alquiler. Revisión de vencimientos y/o extensiones de contratos, términos de plazos,
+        seguros, etc., para tener las propiedades con toda su reglamentación diaria y en regla."
+    }
+
+    Subdomain CargueVentasHistoricasPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Cargue y presentación de la información histórica de cada propiedad para garantizar que los
+        usuarios puedan analizar sus propiedades interesadas."
+    }
+
+    Subdomain PublicacionPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Publicación de las propiedades, sus características, valor, estado; y toda la información
+        pertinente para el interesado en tomarla ya sea en alquiler, subalquiler, venta y/o trabajo conjunto."
+    }
+
+    Subdomain ActualizacionPropiedades{
+        type=GENERIC_SUBDOMAIN
+        domainVisionStatement="Mantenimiento de la información de las propiedades mediante la investigación de nuevas
+        características y actualización de los anuncios."
+    }
+
+    Subdomain IdentificacionMercado{
+        type=CORE_DOMAIN
+        domainVisionStatement="Identificación del mercado al que pertenece cada propiedad, clasificación de las propiedades 
+        dependiendo de su tipo y/o uso"
+    }
+
+    Subdomain AnalisisMercado{
+        type=CORE_DOMAIN
+        domainVisionStatement="Se permite a los usuarios realizar un desglose de propiedad principal, la participación de
+        mercado de las agencias, las tendencias históricas de arrendamiento y venta, y más en un área geográfica específica
+        o dentro de un conjunto de propiedades competitivas."
+    }
+
+    Subdomain AccesoNuevosMercados{
+        type=SUPPORTING_DOMAIN
+        domainVisionStatement="Investigación de propiedades que no se encuentren registradas en el sistema para incluir nuevos
+        interesados y acceder a las transacciones de la propiedad con el fin de administrarla de forma ágil y segura."
+    }
+
+    Subdomain VerificacionInformacionClientes{
+        type=CORE_DOMAIN
+        domainVisionStatement="Estudio de rigor donde se verifica la información de los potenciales arrendatarios de una
+        propiedad, para minimizar cualquier riesgo en contra de la propiedad, los agentes y/o los propietarios."
+    }
+
+    Subdomain ComunicacionClientes{
+        type=CORE_DOMAIN
+        domainVisionStatement="Comunicación entre los interesados en las propiedades y propietarios para generar una
+        relación contractual en la que los agentes puedan exponer sus servicios a los propietarios y así, que puedan
+        expresar sus necesidades y recibir una asesoría para una negociación en doble vida donde ambas partes obtengan
+        una ganancia. "
+    }
+
+    //Subdominios adicionales TO-BE
+    Subdomain ExpansionLatinoamericaContexto{
+        type=CORE_DOMAIN
+        domainVisionStatement="Procesos y funciones relacionadas con los requisitos necesarios para empezar a operar en
+        paises como Brasil, Perú, Ecuador, Chile, Argentina y México."
+    }
+
+    Subdomain ExpansionGlobalContexto{
+        type=CORE_DOMAIN
+        domainVisionStatement="Procesos y funciones relacionadas con los requisitos necesarios para empezar a operar en
+        Europa, Medio Oriente, Norte de África, ENEA y Oceanía."
+    }
+
+    Subdomain LegislacionProcesosLatinoamericaContexto{
+        type=CORE_DOMAIN
+        domainVisionStatement="Adaptación y parametrización de la legislación existente para que pueda acoplarse con las
+        leyes vigentes de cada país Latinoamericano y pueda operar sin ningun tipo de bloqueante contractual."
+    }
+
+    Subdomain LegislacionProcesosGlobalContexto{
+        type=CORE_DOMAIN
+       domainVisionStatement="Adaptación y parametrización de la legislación existente para que pueda acoplarse con las
+        leyes vigentes de cada país a nivel Global y pueda operar sin ningun tipo de bloqueante contractual."
+    }
+
+}
+
+/*
+ * CONTEXTOS
+ */
+
+BoundedContext InformacionPropiedadesContexto implements InspeccionPropiedades, InvestigacionDetallePropiedades{
+    domainVisionStatement="Manejo de todos los subdominios relacionados con la información de las propiedades,
+    el detalle de cada una de ellas, las investigaciones pertinentes para detallar cada una de las propiedades y
+    todo lo que concierne al levantamiento y gestión de la información de cada una de las propiedades"
+}
+
+BoundedContext GestionPublicacionesContexto implements PublicacionPropiedades, ActualizacionPropiedades, ComparacionPropiedades{
+    domainVisionStatement="Gestión y control de las publicaciones que se hacen con cada una de las propiedades.
+    Actualización de la información de cada una de las propiedades y comparación de información relevante de cada
+    una de las propiedades"
+}
+
+BoundedContext GestionMercadosContexto implements IdentificacionMercado, AnalisisMercado, AccesoNuevosMercados{
+     domainVisionStatement="Identificación y analisis de mercados, clasificación de las propiedades, participación
+     de mercado, tendencias históricas, inclusión de nuevas propiedades y mercados interesados."
+}
+
+BoundedContext SupervisionAnalisisInformacionContexto implements MonitoreoPropiedades, CargueVentasHistoricasPropiedades{
+    domainVisionStatement="Disponibilización de información de historica y en tiempo real para la revisión constante del mercado
+    y las propieedades."
+}
+
+BoundedContext RelacionContractualContexto implements ComunicacionClientes, VerificacionInformacionClientes{
+    domainVisionStatement="Comunicación entre los clientes y los agentes, exposición de servicios de los agentes hacia los
+    clientes, estudio de clientes."
+}
+
+//Contextos adicionales TO-BE
+BoundedContext MercadoLatinoamericaContexto implements ExpansionLatinoamericaContexto, LegislacionProcesosLatinoamericaContexto{
+    domainVisionStatement="Levantamiento de información relacionada con mercados, propiedades y clientes en cada uno de los paises
+    pensados para iniciar la expansión a nivel Latinoamerica. Creación de procesos relacionados con la expansión latinoamericana.
+    Adición de leyes y contratos relacionados con la expansión latinoamericana."
+}
+
+BoundedContext MercadoGlobalontexto implements ExpansionGlobalContexto, LegislacionProcesosGlobalContexto{
+    domainVisionStatement="Levantamiento de información relacionada con mercados, propiedades y clientes en cada uno de los paises
+    pensados para iniciar la expansión global. Creación de procesos relacionados con la expansión de manera global. Adición de
+    leyes y contratos relacionados con la expansión global."
+}
+
+/*
+ * CONTEXT MAP
+ */
+
+ ContextMap{
+
+    type = SYSTEM_LANDSCAPE
+    state = TO_BE
+
+    contains InformacionPropiedadesContexto
+    contains GestionPublicacionesContexto
+    contains GestionMercadosContexto
+    contains SupervisionAnalisisInformacionContexto
+    contains RelacionContractualContexto
+    contains MercadoLatinoamericaContexto
+    contains MercadoGlobalontexto
+
+    InformacionPropiedadesContexto [U] -> [D, ACL] GestionPublicacionesContexto
+    GestionMercadosContexto [P] <-> [P] GestionPublicacionesContexto
+    SupervisionAnalisisInformacionContexto[SK] <-> [SK] InformacionPropiedadesContexto
+    RelacionContractualContexto[SK]<->[SK]InformacionPropiedadesContexto
+    GestionMercadosContexto [U, OHS] -> [D] InformacionPropiedadesContexto
+
+    //Relaciones adicionales TO-BE
+    RelacionContractualContexto [P] <-> [P] MercadoGlobalontexto
+    RelacionContractualContexto [P] <-> [P] MercadoLatinoamericaContexto
+    GestionPublicacionesContexto [U, OHS] -> [D] MercadoGlobalontexto
+    GestionPublicacionesContexto [U, OHS] -> [D] MercadoLatinoamericaContexto
+    GestionMercadosContexto [U, OHS] -> [D] MercadoGlobalontexto
+    GestionMercadosContexto [U, OHS] -> [D] MercadoLatinoamericaContexto
+
+ }
+
